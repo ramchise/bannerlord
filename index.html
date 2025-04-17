@@ -63,6 +63,18 @@
 </td>
 </tr>
 <tr>
+<td>attack</td>
+<td></td>
+<td>
+<div class="value">
+<p><strong class="value">Side</strong>: Enemy side</p>
+</div>
+<div class="value">
+<p><strong class="value">Allowed in</strong>: Field battle, Village battle, Siege battle</p>
+</div>
+</td>
+</tr>
+<tr>
 <td>auction</td>
 <td>Start an auction on a custom item you own, with a specified reserve price. Other viewers are able to bid upon your item, and the highest bidder will receive it at the end of the auction.<br>Usage is <code>!auction (custom item index) (reserve price)</code>, e.g. <code>!auction 3 50000</code> would start a new auction for your custom item with the index of 3 (as shown by the 'customs' command or equivalent), with a reserve price of 50000.</td>
 <td>
@@ -150,8 +162,6 @@
 <td>Get a hero in game. Almost all other actions require an adopted hero.</td>
 <td>
 <p class=value>Newly created wanderer</p>
-<p class=value>Create the selected clan if it does not exist</p>
-<p class=value>Viewer selects leader by Clan</p>
 <div class="value">
 <p><strong class="value">Starting Gold</strong>: 0</p>
 </div>
@@ -191,6 +201,35 @@
 <tr>
 <td>nameitem</td>
 <td>You can use this to name your custom items.<br>Usage is <code>!nameitem (custom item index) (name)</code>, for example <code>!nameitem 3 Foehammer</code>. The custom item index is shown in the 'customs' command (or equivalent).</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>!attributes</td>
+<td></td>
+<td>
+<p>Provide the attribute name (or part of it) when calling this</p>
+<div class="value">
+<p><strong class="value">Amount</strong>: 0</p>
+</div>
+<p>Costs 1000000⦷</p>
+</td>
+</tr>
+<tr>
+<td>New Command</td>
+<td></td>
+<td>
+<div class="value">
+<p><strong class="value">Age</strong>: 1</p>
+</div>
+<div class="value">
+<p><strong class="value">Price</strong>: 0</p>
+</div>
+</td>
+</tr>
+<tr>
+<td>power</td>
+<td></td>
 <td>
 </td>
 </tr>
@@ -244,6 +283,18 @@
 </td>
 </tr>
 <tr>
+<td>retire</td>
+<td></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>retire</td>
+<td></td>
+<td>
+</td>
+</tr>
+<tr>
 <td>smitharmor</td>
 <td></td>
 <td>
@@ -273,18 +324,6 @@
 </div>
 <div class="value">
 <p><strong class="value">Allowed in</strong>: Field battle, Village battle, Siege battle, Friendly mission, Hide-out</p>
-</div>
-</td>
-</tr>
-<tr>
-<td>attack</td>
-<td></td>
-<td>
-<div class="value">
-<p><strong class="value">Side</strong>: Enemy side</p>
-</div>
-<div class="value">
-<p><strong class="value">Allowed in</strong>: Field battle, Village battle, Siege battle</p>
 </div>
 </td>
 </tr>
@@ -440,11 +479,11 @@
 <td>Equipment</td>
 <td>
 <p>OneHandedSword</p>
-<img class="equip-img" src="blt_img_7.png" alt="Sparring Flyssa">
+<img class="equip-img" src="blt_img_7.png" alt="Ridged Tipped Arming Sword">
 </td>
 <td>
 <p>Shield</p>
-<img class="equip-img" src="blt_img_8.png" alt="Heavy Round Shield">
+<img class="equip-img" src="blt_img_8.png" alt="Fortified Kite Shield">
 </td>
 </tr>
 </table>
@@ -523,19 +562,19 @@
 <td>Equipment</td>
 <td>
 <p>Bow</p>
-<img class="equip-img" src="blt_img_15.png" alt="Bow of Kurnous">
+<img class="equip-img" src="blt_img_15.png" alt="Woodland Longbow">
 </td>
 <td>
 <p>Arrows</p>
-<img class="equip-img" src="blt_img_16.png" alt="Ballista Arrows">
+<img class="equip-img" src="blt_img_16.png" alt="Piercing Arrows">
 </td>
 <td>
 <p>Arrows</p>
-<img class="equip-img" src="blt_img_17.png" alt="Ballista Arrows">
+<img class="equip-img" src="blt_img_17.png" alt="Piercing Arrows">
 </td>
 <td>
 <p>OneHandedAxe</p>
-<img class="equip-img" src="blt_img_18.png" alt="Sparring Bamboo Handled Axe">
+<img class="equip-img" src="blt_img_18.png" alt="Woodland Axe">
 </td>
 </tr>
 </table>
@@ -609,19 +648,19 @@
 <td>Equipment</td>
 <td>
 <p>Bow</p>
-<img class="equip-img" src="blt_img_25.png" alt="Bow of Kurnous">
+<img class="equip-img" src="blt_img_25.png" alt="Woodland Longbow">
 </td>
 <td>
 <p>Arrows</p>
-<img class="equip-img" src="blt_img_26.png" alt="Ballista Arrows">
+<img class="equip-img" src="blt_img_26.png" alt="Piercing Arrows">
 </td>
 <td>
 <p>Arrows</p>
-<img class="equip-img" src="blt_img_27.png" alt="Ballista Arrows">
+<img class="equip-img" src="blt_img_27.png" alt="Piercing Arrows">
 </td>
 <td>
 <p>TwoHandedAxe</p>
-<img class="equip-img" src="blt_img_28.png" alt="Stoneaxe of Taal">
+<img class="equip-img" src="blt_img_28.png" alt="White Lion Greataxe">
 </td>
 </tr>
 </table>
@@ -692,19 +731,19 @@
 <td>Equipment</td>
 <td>
 <p>Crossbow</p>
-<img class="equip-img" src="blt_img_35.png" alt="Sparring Crossbow">
+<img class="equip-img" src="blt_img_35.png" alt="Hickory Crossbow">
 </td>
 <td>
 <p>Bolts</p>
-<img class="equip-img" src="blt_img_36.png" alt="Tournament Bolts">
+<img class="equip-img" src="blt_img_36.png" alt="Bolts">
 </td>
 <td>
 <p>Bolts</p>
-<img class="equip-img" src="blt_img_37.png" alt="Tournament Bolts">
+<img class="equip-img" src="blt_img_37.png" alt="Bolts">
 </td>
 <td>
 <p>OneHandedSword</p>
-<img class="equip-img" src="blt_img_38.png" alt="Sparring Flyssa">
+<img class="equip-img" src="blt_img_38.png" alt="Ridged Tipped Arming Sword">
 </td>
 </tr>
 </table>
@@ -778,19 +817,19 @@
 <td>Equipment</td>
 <td>
 <p>Crossbow</p>
-<img class="equip-img" src="blt_img_45.png" alt="Sparring Crossbow">
+<img class="equip-img" src="blt_img_45.png" alt="Hickory Crossbow">
 </td>
 <td>
 <p>Bolts</p>
-<img class="equip-img" src="blt_img_46.png" alt="Tournament Bolts">
+<img class="equip-img" src="blt_img_46.png" alt="Bolts">
 </td>
 <td>
 <p>Bolts</p>
-<img class="equip-img" src="blt_img_47.png" alt="Tournament Bolts">
+<img class="equip-img" src="blt_img_47.png" alt="Bolts">
 </td>
 <td>
 <p>TwoHandedSword</p>
-<img class="equip-img" src="blt_img_48.png" alt="Sword de Lyonesse">
+<img class="equip-img" src="blt_img_48.png" alt="Bretonnian Sword">
 </td>
 </tr>
 </table>
@@ -861,15 +900,15 @@
 <td>Equipment</td>
 <td>
 <p>OneHandedLance</p>
-<img class="equip-img" src="blt_img_55.png" alt="Sparring Jagged Spear">
+<img class="equip-img" src="blt_img_55.png" alt="Long Fine Steel Spear">
 </td>
 <td>
 <p>Shield</p>
-<img class="equip-img" src="blt_img_56.png" alt="Heavy Round Shield">
+<img class="equip-img" src="blt_img_56.png" alt="Fortified Kite Shield">
 </td>
 <td>
 <p>OneHandedSword</p>
-<img class="equip-img" src="blt_img_57.png" alt="Sparring Flyssa">
+<img class="equip-img" src="blt_img_57.png" alt="Ridged Tipped Arming Sword">
 </td>
 </tr>
 </table>
@@ -878,7 +917,7 @@
 <td>Mount</td>
 <td>
 <p>Horse</p>
-<img class="equip-img" src="blt_img_58.png" alt="Desert Horse">
+<img class="equip-img" src="blt_img_58.png" alt="Empire Horse Destrier">
 </td>
 </tr>
 </table>
@@ -952,15 +991,15 @@
 <td>Equipment</td>
 <td>
 <p>OneHandedLance</p>
-<img class="equip-img" src="blt_img_65.png" alt="Sparring Jagged Spear">
+<img class="equip-img" src="blt_img_65.png" alt="Long Fine Steel Spear">
 </td>
 <td>
 <p>Shield</p>
-<img class="equip-img" src="blt_img_66.png" alt="Heavy Round Shield">
+<img class="equip-img" src="blt_img_66.png" alt="Fortified Kite Shield">
 </td>
 <td>
 <p>OneHandedMace</p>
-<img class="equip-img" src="blt_img_67.png" alt="Comet Flail">
+<img class="equip-img" src="blt_img_67.png" alt="Highland Mace">
 </td>
 </tr>
 </table>
@@ -1043,19 +1082,19 @@
 <td>Equipment</td>
 <td>
 <p>Bow</p>
-<img class="equip-img" src="blt_img_75.png" alt="Bow of Kurnous">
+<img class="equip-img" src="blt_img_75.png" alt="Woodland Longbow">
 </td>
 <td>
 <p>Arrows</p>
-<img class="equip-img" src="blt_img_76.png" alt="Ballista Arrows">
+<img class="equip-img" src="blt_img_76.png" alt="Piercing Arrows">
 </td>
 <td>
 <p>Arrows</p>
-<img class="equip-img" src="blt_img_77.png" alt="Ballista Arrows">
+<img class="equip-img" src="blt_img_77.png" alt="Piercing Arrows">
 </td>
 <td>
 <p>OneHandedSword</p>
-<img class="equip-img" src="blt_img_78.png" alt="Sparring Flyssa">
+<img class="equip-img" src="blt_img_78.png" alt="Ridged Tipped Arming Sword">
 </td>
 </tr>
 </table>
@@ -1064,7 +1103,7 @@
 <td>Mount</td>
 <td>
 <p>Horse</p>
-<img class="equip-img" src="blt_img_79.png" alt="Desert Horse">
+<img class="equip-img" src="blt_img_79.png" alt="Empire Horse Destrier">
 </td>
 </tr>
 </table>
@@ -1138,19 +1177,19 @@
 <td>Equipment</td>
 <td>
 <p>Bow</p>
-<img class="equip-img" src="blt_img_86.png" alt="Bow of Kurnous">
+<img class="equip-img" src="blt_img_86.png" alt="Woodland Longbow">
 </td>
 <td>
 <p>Arrows</p>
-<img class="equip-img" src="blt_img_87.png" alt="Ballista Arrows">
+<img class="equip-img" src="blt_img_87.png" alt="Piercing Arrows">
 </td>
 <td>
 <p>Arrows</p>
-<img class="equip-img" src="blt_img_88.png" alt="Ballista Arrows">
+<img class="equip-img" src="blt_img_88.png" alt="Piercing Arrows">
 </td>
 <td>
 <p>TwoHandedGlaive</p>
-<img class="equip-img" src="blt_img_89.png" alt="Bo staff">
+<img class="equip-img" src="blt_img_89.png" alt="Raven Scythe">
 </td>
 </tr>
 </table>
@@ -1233,15 +1272,15 @@
 <td>Equipment</td>
 <td>
 <p>TwoHandedSword</p>
-<img class="equip-img" src="blt_img_97.png" alt="Sword de Lyonesse">
+<img class="equip-img" src="blt_img_97.png" alt="Bretonnian Sword">
 </td>
 <td>
 <p>ThrowingJavelins</p>
-<img class="equip-img" src="blt_img_98.png" alt="Sparring Javelin">
+<img class="equip-img" src="blt_img_98.png" alt="Hooked Javelin">
 </td>
 <td>
 <p>ThrowingJavelins</p>
-<img class="equip-img" src="blt_img_99.png" alt="Sparring Javelin">
+<img class="equip-img" src="blt_img_99.png" alt="Hooked Javelin">
 </td>
 </tr>
 </table>
@@ -1316,7 +1355,7 @@
 <td>Equipment</td>
 <td>
 <p>TwoHandedAxe</p>
-<img class="equip-img" src="blt_img_106.png" alt="Stoneaxe of Taal">
+<img class="equip-img" src="blt_img_106.png" alt="White Lion Greataxe">
 </td>
 </tr>
 </table>
