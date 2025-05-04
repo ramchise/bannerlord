@@ -33,16 +33,6 @@
 <a href="#22"><h2 class="toc-h2">Battle End Rewards</h2></a>
 <a href="#23"><h2 class="toc-h2">Kill Streaks</h2></a>
 <a href="#24"><h2 class="toc-h2">Achievements</h2></a>
-<a href="#25"><h1 class="toc-h1">Tournament Config</h1></a>
-<a href="#26"><h2 class="toc-h2">General</h2></a>
-<a href="#27"><h2 class="toc-h2">Equipment</h2></a>
-<a href="#28"><h2 class="toc-h2">Balancing</h2></a>
-<a href="#29"><h2 class="toc-h2">Round Type</h2></a>
-<a href="#30"><h2 class="toc-h2">Round Rewards</h2></a>
-<a href="#31"><h2 class="toc-h2">Rewards</h2></a>
-<a href="#32"><h2 class="toc-h2">Reward Type</h2></a>
-<a href="#33"><h2 class="toc-h2">Reward Tier</h2></a>
-<a href="#34"><h2 class="toc-h2">Betting</h2></a>
 </div>
 <div class="commands">
 <a name="1"></a>
@@ -63,20 +53,68 @@
 </td>
 </tr>
 <tr>
-<td>attack</td>
-<td></td>
+<td>joinculture</td>
+<td>Adopt a randomly selected Hero, filtered by Culture <br> Can do "!joinculture list" for a list of cultures</td>
 <td>
+<p class=value>Viewer selects hero by culture</p>
+<p class=value>Newly created wanderer</p>
 <div class="value">
-<p><strong class="value">Side</strong>: Enemy side</p>
+<p><strong class="value">Starting Gold</strong>: 50000</p>
 </div>
 <div class="value">
-<p><strong class="value">Allowed in</strong>: Field battle, Village battle, Siege battle</p>
+<p><strong class="value">Starting Equipment Tier</strong>: 1</p>
+</div>
+<div class="value">
+<p><strong class="value">Starting Skills</strong>:</p>
+<table class="starting-skills">
+<tr>
+<th>Skill</th>
+<th>Level</th>
+</tr>
+<tr>
+<td>All</td>
+<td>25 to 75</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td>joinfaction</td>
+<td>Adopt a randomly selected Hero, filtered by Faction <br> Can do "!joinfaction list" for a list of factions</td>
+<td>
+<p class=value>Viewer selects hero by faction</p>
+<p class=value>Newly created wanderer</p>
+<div class="value">
+<p><strong class="value">Starting Gold</strong>: 50000</p>
+</div>
+<div class="value">
+<p><strong class="value">Starting Equipment Tier</strong>: 1</p>
+</div>
+<div class="value">
+<p><strong class="value">Starting Skills</strong>:</p>
+<table class="starting-skills">
+<tr>
+<th>Skill</th>
+<th>Level</th>
+</tr>
+<tr>
+<td>All</td>
+<td>25 to 75</td>
+</tr>
+</table>
 </div>
 </td>
 </tr>
 <tr>
 <td>auction</td>
-<td>Start an auction on a custom item you own, with a specified reserve price. Other viewers are able to bid upon your item, and the highest bidder will receive it at the end of the auction.<br>Usage is <code>!auction (custom item index) (reserve price)</code>, e.g. <code>!auction 3 50000</code> would start a new auction for your custom item with the index of 3 (as shown by the 'customs' command or equivalent), with a reserve price of 50000.</td>
+<td>Start an auction on a custom item you own, with a specified reserve price. Other viewers are able to bid upon your item, and the highest bidder will receive it at the end of the auction.<br>Usage is <code>!auction (custom item index) (reserve price)</code>, e.g. <code>!auction 3 50000</code> would start a new auction for your custom item with the index of 3 (as shown by the 'customitems' command), with a reserve price of 50000.</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>bettourney</td>
+<td>Use this to bet on tournament matches, when available.<br>Usage is <code>!bettourney (team) (gold)</code>, for example <code>!bettourney red 10000</code> to bet 10000 gold on red. Winnings are divided up from the whole pot, based on relative bet size.<br>If only one team is bet upon, the bets will be refunded.</td>
 <td>
 </td>
 </tr>
@@ -87,15 +125,20 @@
 </td>
 </tr>
 <tr>
-<td>bltbet</td>
-<td>Use this to bet on tournament matches, when available.<br>Usage is <code>!bltbet (team) (gold)</code>, for example <code>!bltbet red 10000</code> to bet 10000 gold on red. Winnings are divided up from the whole pot, based on relative bet size.<br>If only one team is bet upon, the bets will be refunded.</td>
+<td>buymount</td>
+<td>Buy a randomly tiered mount for your Hero.</td>
 <td>
 </td>
 </tr>
 <tr>
-<td>buymount</td>
-<td></td>
+<td>clan</td>
+<td>Use to manage clan actions <br> Usage is <code>!clan (join/create/lead/rename/stats) name </code> <br> Example: !clan join Banu Tammar or !clan stats</td>
 <td>
+<p class=value><strong>Enabled Commands:</strong> Join, Create, Lead, Rename, Stats</p>
+<p class=value><strong>Join Config: </strong>Max Heroes=50, Price=100⦷, Allow Join Players Clan?=True</p>
+<p class=value><strong>Create Config: </strong>Price=2500000⦷</p>
+<p class=value><strong>Lead Config: </strong>Price=1000000⦷, Challenge Heroes?=True</p>
+<p class=value><strong>Rename Config: </strong>Price=1000000⦷</p>
 </td>
 </tr>
 <tr>
@@ -103,14 +146,14 @@
 <td>Selects a new class for your hero, updating your existing equipment to match the class requirements.<br>Usage is <code>!class (new class name)</code>, e.g. <code>!class archer</code>.</td>
 <td>
 <div class="value">
-<p><strong class="value">Tier costs</strong>: 1=5000⦷, 2=10000⦷, 3=20000⦷, 4=40000⦷, 5=80000⦷, 5=80000⦷, 6=160000⦷</p>
+<p><strong class="value">Tier costs</strong>: 1=100⦷, 2=100⦷, 3=100⦷, 4=100⦷, 5=100⦷, 5=100⦷, 6=100⦷</p>
 </div>
 <p>Free if you do not already have a class</p>
 <p>Updates equipment to match new class</p>
 </td>
 </tr>
 <tr>
-<td>customs</td>
+<td>customitems</td>
 <td>Shows the viewers custom item list, which is required so they know what item index to use in the custom item related commands.</td>
 <td>
 <div class="value">
@@ -120,22 +163,22 @@
 </tr>
 <tr>
 <td>discarditem</td>
-<td>Throw away one of your custom items.<br>Usage is <code>!discarditem (custom item index)</code>, e.g. <code>!discarditem 3</code> would discard your custom item with the index 3. The custom item index is shown in the 'customs' command (or equivalent).</td>
+<td>Throw away one of your custom items.<br>Usage is <code>!discarditem (custom item index)</code>, e.g. <code>!discarditem 3</code> would discard your custom item with the index 3. The custom item index is shown in the 'customs' command.</td>
 <td>
 </td>
 </tr>
 <tr>
 <td>equip</td>
-<td>Upgrades your heroes equipment tier, replacing any existing equipment of lower tier, except for custom items. The cost depends on the tier you are trying to upgrade to.</td>
+<td>Upgrades your heroes equipment tier, replacing any existing equipment of lower tier, except for custom items. The cost depends on the tier you are trying to upgrade to. <br> Usage is <code>!equip (blank for auto upgrade/tier number) </code> <br> Example: !equip 1 or !equip</td>
 <td>
 <div class="value">
-<p><strong class="value">Tier costs</strong>: 1=25000⦷, 2=50000⦷, 3=100000⦷, 4=200000⦷, 5=400000⦷, 5=400000⦷, 6=1000000⦷</p>
+<p><strong class="value">Tier costs</strong>: 1=50000⦷, 2=200000⦷, 3=400000⦷, 4=600000⦷, 5=800000⦷, 6=1500000⦷</p>
 </div>
 </td>
 </tr>
 <tr>
 <td>giveitem</td>
-<td>Give one of your custom items to another viewer.<br>Usage is <code>!giveitem (custom item index) (viewer)</code>, e.g. <code>!giveitem 3 C4alad0g</code> would give your custom item with the index 3 to the viewer called C4lad0g. The custom item index is shown in the 'customs' command (or equivalent).</td>
+<td>Give one of your custom items to another viewer.<br>Usage is <code>!giveitem (custom item index) (viewer)</code>, e.g. <code>!giveitem 3 C4alad0g</code> would give your custom item with the index 3 to the viewer called C4lad0g. The custom item index is shown in the 'customitems' command.</td>
 <td>
 </td>
 </tr>
@@ -149,8 +192,22 @@
 </td>
 </tr>
 <tr>
+<td>heal</td>
+<td>Heals your hero over time. Only works in battle, when your hero is summoned.</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>hero</td>
+<td>Use to adjust hero physical features <br> Usage is <code>!hero (gender) (male/female) </code> <br> Example: !hero gender male</td>
+<td>
+<p class=value><strong>Enabled Commands:</strong> Change Hero Gender</p>
+<p class=value><strong>Gender Change Config: </strong>Price=50000⦷, Only on created heroes?=True</p>
+</td>
+</tr>
+<tr>
 <td>inv</td>
-<td>Shows your heroes inventory, including equipment tier, full battle and civilian equipment lists, and all custom items in storage.</td>
+<td>Shows your heroes equipped loadout and inventory, excluding custom items (do !customItems instead)</td>
 <td>
 <div class="value">
 <p><strong class="value">Shows</strong>: Gold, Equipment tier, Battle equipment inventory</p>
@@ -159,14 +216,14 @@
 </tr>
 <tr>
 <td>join</td>
-<td>Get a hero in game. Almost all other actions require an adopted hero.</td>
+<td>Adopt a newly created Hero</td>
 <td>
 <p class=value>Newly created wanderer</p>
 <div class="value">
-<p><strong class="value">Starting Gold</strong>: 0</p>
+<p><strong class="value">Starting Gold</strong>: 50000</p>
 </div>
 <div class="value">
-<p><strong class="value">Inheritance</strong>: 25% of gold spent on equipment and retinue, up to 2 custom items</p>
+<p><strong class="value">Starting Equipment Tier</strong>: 1</p>
 </div>
 <div class="value">
 <p><strong class="value">Starting Skills</strong>:</p>
@@ -176,55 +233,26 @@
 <th>Level</th>
 </tr>
 <tr>
-<td>Melee</td>
-<td>50 to 125</td>
-</tr>
-<tr>
-<td>Ranged</td>
-<td>50 to 125</td>
-</tr>
-<tr>
-<td>Riding</td>
-<td>25 to 75</td>
-</tr>
-<tr>
-<td>Athletics</td>
+<td>All</td>
 <td>25 to 75</td>
 </tr>
 </table>
 </div>
-<div class="value">
-<p><strong class="value">Starting Equipment Tier</strong>: 1</p>
-</div>
+</td>
+</tr>
+<tr>
+<td>kingdom</td>
+<td>Use to manage clan actions <br> Usage is <code>!kingdom (join/rebel/stats) name </code> <br> Example: !kingdom join Aserai or !clan stats</td>
+<td>
+<p class=value><strong>Enabled Commands:</strong> Join, Create, Stats</p>
+<p class=value><strong>Join Config: </strong>Max Clans=, Price=150000⦷, Allow Join Players Kingdom?=False</p>
+<p class=value><strong>Rebel Config: </strong>Price=2500000⦷, Minimum Clan Tier=2</p>
 </td>
 </tr>
 <tr>
 <td>nameitem</td>
-<td>You can use this to name your custom items.<br>Usage is <code>!nameitem (custom item index) (name)</code>, for example <code>!nameitem 3 Foehammer</code>. The custom item index is shown in the 'customs' command (or equivalent).</td>
+<td>You can use this to name your custom items.<br>Usage is <code>!nameitem (custom item index) (name)</code>, for example <code>!nameitem 3 Foehammer</code>. The custom item index is shown in the 'customitems' command.</td>
 <td>
-</td>
-</tr>
-<tr>
-<td>!attributes</td>
-<td></td>
-<td>
-<p>Provide the attribute name (or part of it) when calling this</p>
-<div class="value">
-<p><strong class="value">Amount</strong>: 0</p>
-</div>
-<p>Costs 1000000⦷</p>
-</td>
-</tr>
-<tr>
-<td>New Command</td>
-<td></td>
-<td>
-<div class="value">
-<p><strong class="value">Age</strong>: 1</p>
-</div>
-<div class="value">
-<p><strong class="value">Price</strong>: 0</p>
-</div>
 </td>
 </tr>
 <tr>
@@ -248,13 +276,13 @@
 <td>
 <p>Re-rolls your equipment at your current tier</p>
 <div class="value">
-<p><strong class="value">Tier costs</strong>: 1=10000⦷, 2=25000⦷, 3=50000⦷, 4=100000⦷, 5=200000⦷, 5=200000⦷, 6=400000⦷</p>
+<p><strong class="value">Tier costs</strong>: 1=10000⦷, 2=25000⦷, 3=50000⦷, 4=100000⦷, 5=200000⦷, 6=400000⦷</p>
 </div>
 </td>
 </tr>
 <tr>
 <td>retinue</td>
-<td>Purchases new retinue troops, or upgrades existing ones to the next tier if you have reached the limit. Retinue will appear with you in battle when you summon, earning you money when they make kills. You can pass a number to the command to specify how many troops you want to buy or upgrade. By default it will do as many as you can afford.</td>
+<td>Purchases new retinue troops, or upgrades existing ones to the next tier if you have reached the limit. Retinue will appear with you in battle when you summon, earning you money when they make kills. <br> Usage is <code>!retinue (blank or all for auto upgrade/upgrade amount) </code> <br> Example: !retinue 1 or !retinue all</td>
 <td>
 <div class="value">
 <p><strong class="value">Max retinue</strong>: 5</p>
@@ -280,29 +308,20 @@
 <td>retire</td>
 <td></td>
 <td>
-</td>
-</tr>
-<tr>
-<td>retire</td>
-<td></td>
-<td>
-</td>
-</tr>
-<tr>
-<td>retire</td>
-<td></td>
-<td>
+<div class="value">
+<p><strong class="value">Only Created Heroes?</strong>: False</p>
+</div>
 </td>
 </tr>
 <tr>
 <td>smitharmor</td>
-<td></td>
+<td>Smith a custom armor item</td>
 <td>
 </td>
 </tr>
 <tr>
 <td>smithweapon</td>
-<td></td>
+<td>Smith a custom weapon</td>
 <td>
 </td>
 </tr>
@@ -317,13 +336,31 @@
 </tr>
 <tr>
 <td>summon</td>
-<td></td>
+<td>Use this when the streamer enters a battle, to spawn your adopted hero on the streamers side (along with your retinue).</td>
 <td>
 <div class="value">
 <p><strong class="value">Side</strong>: Streamers side</p>
 </div>
 <div class="value">
 <p><strong class="value">Allowed in</strong>: Field battle, Village battle, Siege battle, Friendly mission, Hide-out</p>
+</div>
+</td>
+</tr>
+<tr>
+<td>tourney</td>
+<td>Join the tournament queue with your adopted hero. You can see the queue in the overlay. Each tournament can have up to 16 heroes in it, once it is full further heroes will remain in the queue for the next tournament.</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>attack</td>
+<td>Use this when the streamer enters a battle, to spawn your adopted hero on the enemy side (along with your retinue).</td>
+<td>
+<div class="value">
+<p><strong class="value">Side</strong>: Enemy side</p>
+</div>
+<div class="value">
+<p><strong class="value">Allowed in</strong>: Field battle, Village battle, Siege battle</p>
 </div>
 </td>
 </tr>
@@ -340,15 +377,139 @@
 <th>Settings</th>
 </tr>
 <tr>
-<td>Attack</td>
-<td>Use this when the streamer enters a battle, to spawn your adopted hero on the enemy side (along with your retinue).</td>
+<td>Adopt a Hero by Culture</td>
+<td>Adopt a randomly selected Hero, filtered by Culture.  Enter "list" to get a list of cultures</td>
 <td>
+<p class=value>Viewer selects hero by culture</p>
 <div class="value">
-<p><strong class="value">Side</strong>: Enemy side</p>
+<p><strong class="value">Allowed</strong>: Wanderer, Companions</p>
 </div>
 <div class="value">
-<p><strong class="value">Allowed in</strong>: Field battle, Village battle, Siege battle, Friendly mission, Hide-out</p>
+<p><strong class="value">Starting Age Range</strong>: 18 to 35</p>
 </div>
+<div class="value">
+<p><strong class="value">Starting Gold</strong>: 0</p>
+</div>
+<div class="value">
+<p><strong class="value">Starting Equipment Tier</strong>: 1</p>
+</div>
+<div class="value">
+<p><strong class="value">Starting Skills</strong>:</p>
+<table class="starting-skills">
+<tr>
+<th>Skill</th>
+<th>Level</th>
+</tr>
+<tr>
+<td>Melee</td>
+<td>25 to 50</td>
+</tr>
+<tr>
+<td>Ranged</td>
+<td>25 to 50</td>
+</tr>
+<tr>
+<td>Athletics</td>
+<td>25 to 50</td>
+</tr>
+<tr>
+<td>Riding</td>
+<td>25 to 50</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td>Adopt a Hero by Faction</td>
+<td>Adopt a randomly selected Hero, filtered by Faction.  Enter "list" to get a list of factions</td>
+<td>
+<p class=value>Viewer selects hero by name</p>
+<p class=value>Newly created wanderer</p>
+<div class="value">
+<p><strong class="value">Starting Age Range</strong>: 18 to 35</p>
+</div>
+<div class="value">
+<p><strong class="value">Starting Gold</strong>: 0</p>
+</div>
+<div class="value">
+<p><strong class="value">Starting Equipment Tier</strong>: 1</p>
+</div>
+<div class="value">
+<p><strong class="value">Starting Skills</strong>:</p>
+<table class="starting-skills">
+<tr>
+<th>Skill</th>
+<th>Level</th>
+</tr>
+<tr>
+<td>Melee</td>
+<td>25 to 50</td>
+</tr>
+<tr>
+<td>Ranged</td>
+<td>25 to 50</td>
+</tr>
+<tr>
+<td>Athletics</td>
+<td>25 to 50</td>
+</tr>
+<tr>
+<td>Riding</td>
+<td>25 to 50</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td>Adopt a Random Hero</td>
+<td>Adopt a randomly selected Hero. Almost all other actions require an adopted hero.</td>
+<td>
+<p class=value>Viewer selects hero by name</p>
+<div class="value">
+<p><strong class="value">Allowed</strong>: Wanderer, Companions</p>
+</div>
+<div class="value">
+<p><strong class="value">Starting Age Range</strong>: 18 to 35</p>
+</div>
+<div class="value">
+<p><strong class="value">Starting Gold</strong>: 0</p>
+</div>
+<div class="value">
+<p><strong class="value">Starting Equipment Tier</strong>: 1</p>
+</div>
+<div class="value">
+<p><strong class="value">Starting Skills</strong>:</p>
+<table class="starting-skills">
+<tr>
+<th>Skill</th>
+<th>Level</th>
+</tr>
+<tr>
+<td>Melee</td>
+<td>25 to 50</td>
+</tr>
+<tr>
+<td>Ranged</td>
+<td>25 to 50</td>
+</tr>
+<tr>
+<td>Athletics</td>
+<td>25 to 50</td>
+</tr>
+<tr>
+<td>Riding</td>
+<td>25 to 50</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td>Burn Player</td>
+<td></td>
+<td>
 </td>
 </tr>
 <tr>
@@ -373,7 +534,7 @@
 </td>
 </tr>
 <tr>
-<td>Give Player Gold</td>
+<td>Give Streamer Gold</td>
 <td>Transfer 10,000 gold to the streamers character, from your hero.</td>
 <td>
 </td>
@@ -394,6 +555,9 @@
 <td>Retire My Hero</td>
 <td>Use this if you no longer wish to play with your current hero. They will be marked as (retired), and you will then be able to adopt a new one. Inheritence rules apply the same to retirement as they do to death. You MUST enter yes at the prompt (exactly as written, in lower case) for the retirement to complete.</td>
 <td>
+<div class="value">
+<p><strong class="value">Only Created Heroes?</strong>: True</p>
+</div>
 </td>
 </tr>
 <tr>
@@ -418,6 +582,18 @@
 <td>Tournament</td>
 <td>Join the tournament queue with your adopted hero. You can see the queue in the overlay. Each tournament can have up to 16 heroes in it, once it is full further heroes will remain in the queue for the next tournament.</td>
 <td>
+</td>
+</tr>
+<tr>
+<td>Traitor</td>
+<td>Use this when the streamer enters a battle, to spawn your adopted hero on the enemy side (along with your retinue).</td>
+<td>
+<div class="value">
+<p><strong class="value">Side</strong>: Enemy side</p>
+</div>
+<div class="value">
+<p><strong class="value">Allowed in</strong>: Field battle, Village battle, Siege battle, Friendly mission, Hide-out</p>
+</div>
 </td>
 </tr>
 <tr>
@@ -471,7 +647,7 @@
 <table class="hero-class">
 <tr>
 <td>Formation</td>
-<td>Infantry</td>
+<td>Ranged</td>
 </tr>
 </table>
 <table class="hero-class">
@@ -479,11 +655,11 @@
 <td>Equipment</td>
 <td>
 <p>OneHandedSword</p>
-<img class="equip-img" src="blt_img_7.png" alt="Ridged Tipped Arming Sword">
+<img class="equip-img" src="blt_img_7.png" alt="Sparring Flyssa">
 </td>
 <td>
 <p>Shield</p>
-<img class="equip-img" src="blt_img_8.png" alt="Fortified Kite Shield">
+<img class="equip-img" src="blt_img_8.png" alt="Heavy Round Shield">
 </td>
 </tr>
 </table>
@@ -562,19 +738,19 @@
 <td>Equipment</td>
 <td>
 <p>Bow</p>
-<img class="equip-img" src="blt_img_15.png" alt="Woodland Longbow">
+<img class="equip-img" src="blt_img_15.png" alt="Practice Bow">
 </td>
 <td>
 <p>Arrows</p>
-<img class="equip-img" src="blt_img_16.png" alt="Piercing Arrows">
+<img class="equip-img" src="blt_img_16.png" alt="Ballista Arrows">
 </td>
 <td>
 <p>Arrows</p>
-<img class="equip-img" src="blt_img_17.png" alt="Piercing Arrows">
+<img class="equip-img" src="blt_img_17.png" alt="Ballista Arrows">
 </td>
 <td>
 <p>OneHandedAxe</p>
-<img class="equip-img" src="blt_img_18.png" alt="Woodland Axe">
+<img class="equip-img" src="blt_img_18.png" alt="Sparring Bamboo Handled Axe">
 </td>
 </tr>
 </table>
@@ -648,19 +824,19 @@
 <td>Equipment</td>
 <td>
 <p>Bow</p>
-<img class="equip-img" src="blt_img_25.png" alt="Woodland Longbow">
+<img class="equip-img" src="blt_img_25.png" alt="Practice Bow">
 </td>
 <td>
 <p>Arrows</p>
-<img class="equip-img" src="blt_img_26.png" alt="Piercing Arrows">
+<img class="equip-img" src="blt_img_26.png" alt="Ballista Arrows">
 </td>
 <td>
 <p>Arrows</p>
-<img class="equip-img" src="blt_img_27.png" alt="Piercing Arrows">
+<img class="equip-img" src="blt_img_27.png" alt="Ballista Arrows">
 </td>
 <td>
 <p>TwoHandedAxe</p>
-<img class="equip-img" src="blt_img_28.png" alt="White Lion Greataxe">
+<img class="equip-img" src="blt_img_28.png" alt="Execution Axe">
 </td>
 </tr>
 </table>
@@ -731,19 +907,19 @@
 <td>Equipment</td>
 <td>
 <p>Crossbow</p>
-<img class="equip-img" src="blt_img_35.png" alt="Hickory Crossbow">
+<img class="equip-img" src="blt_img_35.png" alt="Sparring Crossbow">
 </td>
 <td>
 <p>Bolts</p>
-<img class="equip-img" src="blt_img_36.png" alt="Bolts">
+<img class="equip-img" src="blt_img_36.png" alt="Tournament Bolts">
 </td>
 <td>
 <p>Bolts</p>
-<img class="equip-img" src="blt_img_37.png" alt="Bolts">
+<img class="equip-img" src="blt_img_37.png" alt="Tournament Bolts">
 </td>
 <td>
 <p>OneHandedSword</p>
-<img class="equip-img" src="blt_img_38.png" alt="Ridged Tipped Arming Sword">
+<img class="equip-img" src="blt_img_38.png" alt="Sparring Flyssa">
 </td>
 </tr>
 </table>
@@ -817,19 +993,19 @@
 <td>Equipment</td>
 <td>
 <p>Crossbow</p>
-<img class="equip-img" src="blt_img_45.png" alt="Hickory Crossbow">
+<img class="equip-img" src="blt_img_45.png" alt="Sparring Crossbow">
 </td>
 <td>
 <p>Bolts</p>
-<img class="equip-img" src="blt_img_46.png" alt="Bolts">
+<img class="equip-img" src="blt_img_46.png" alt="Tournament Bolts">
 </td>
 <td>
 <p>Bolts</p>
-<img class="equip-img" src="blt_img_47.png" alt="Bolts">
+<img class="equip-img" src="blt_img_47.png" alt="Tournament Bolts">
 </td>
 <td>
 <p>TwoHandedSword</p>
-<img class="equip-img" src="blt_img_48.png" alt="Bretonnian Sword">
+<img class="equip-img" src="blt_img_48.png" alt="Sparring Twohander">
 </td>
 </tr>
 </table>
@@ -900,15 +1076,15 @@
 <td>Equipment</td>
 <td>
 <p>OneHandedLance</p>
-<img class="equip-img" src="blt_img_55.png" alt="Long Fine Steel Spear">
+<img class="equip-img" src="blt_img_55.png" alt="Sparring Jagged Spear">
 </td>
 <td>
 <p>Shield</p>
-<img class="equip-img" src="blt_img_56.png" alt="Fortified Kite Shield">
+<img class="equip-img" src="blt_img_56.png" alt="Heavy Round Shield">
 </td>
 <td>
 <p>OneHandedSword</p>
-<img class="equip-img" src="blt_img_57.png" alt="Ridged Tipped Arming Sword">
+<img class="equip-img" src="blt_img_57.png" alt="Sparring Flyssa">
 </td>
 </tr>
 </table>
@@ -917,7 +1093,7 @@
 <td>Mount</td>
 <td>
 <p>Horse</p>
-<img class="equip-img" src="blt_img_58.png" alt="Empire Horse Destrier">
+<img class="equip-img" src="blt_img_58.png" alt="Desert Horse">
 </td>
 </tr>
 </table>
@@ -991,15 +1167,15 @@
 <td>Equipment</td>
 <td>
 <p>OneHandedLance</p>
-<img class="equip-img" src="blt_img_65.png" alt="Long Fine Steel Spear">
+<img class="equip-img" src="blt_img_65.png" alt="Sparring Jagged Spear">
 </td>
 <td>
 <p>Shield</p>
-<img class="equip-img" src="blt_img_66.png" alt="Fortified Kite Shield">
+<img class="equip-img" src="blt_img_66.png" alt="Heavy Round Shield">
 </td>
 <td>
 <p>OneHandedMace</p>
-<img class="equip-img" src="blt_img_67.png" alt="Highland Mace">
+<img class="equip-img" src="blt_img_67.png" alt="Blacksmith Hammer">
 </td>
 </tr>
 </table>
@@ -1082,19 +1258,19 @@
 <td>Equipment</td>
 <td>
 <p>Bow</p>
-<img class="equip-img" src="blt_img_75.png" alt="Woodland Longbow">
+<img class="equip-img" src="blt_img_75.png" alt="Practice Bow">
 </td>
 <td>
 <p>Arrows</p>
-<img class="equip-img" src="blt_img_76.png" alt="Piercing Arrows">
+<img class="equip-img" src="blt_img_76.png" alt="Ballista Arrows">
 </td>
 <td>
 <p>Arrows</p>
-<img class="equip-img" src="blt_img_77.png" alt="Piercing Arrows">
+<img class="equip-img" src="blt_img_77.png" alt="Ballista Arrows">
 </td>
 <td>
 <p>OneHandedSword</p>
-<img class="equip-img" src="blt_img_78.png" alt="Ridged Tipped Arming Sword">
+<img class="equip-img" src="blt_img_78.png" alt="Sparring Flyssa">
 </td>
 </tr>
 </table>
@@ -1103,7 +1279,7 @@
 <td>Mount</td>
 <td>
 <p>Horse</p>
-<img class="equip-img" src="blt_img_79.png" alt="Empire Horse Destrier">
+<img class="equip-img" src="blt_img_79.png" alt="Desert Horse">
 </td>
 </tr>
 </table>
@@ -1177,19 +1353,19 @@
 <td>Equipment</td>
 <td>
 <p>Bow</p>
-<img class="equip-img" src="blt_img_86.png" alt="Woodland Longbow">
+<img class="equip-img" src="blt_img_86.png" alt="Practice Bow">
 </td>
 <td>
 <p>Arrows</p>
-<img class="equip-img" src="blt_img_87.png" alt="Piercing Arrows">
+<img class="equip-img" src="blt_img_87.png" alt="Ballista Arrows">
 </td>
 <td>
 <p>Arrows</p>
-<img class="equip-img" src="blt_img_88.png" alt="Piercing Arrows">
+<img class="equip-img" src="blt_img_88.png" alt="Ballista Arrows">
 </td>
 <td>
 <p>TwoHandedGlaive</p>
-<img class="equip-img" src="blt_img_89.png" alt="Raven Scythe">
+<img class="equip-img" src="blt_img_89.png" alt="Bo staff">
 </td>
 </tr>
 </table>
@@ -1272,15 +1448,15 @@
 <td>Equipment</td>
 <td>
 <p>TwoHandedSword</p>
-<img class="equip-img" src="blt_img_97.png" alt="Bretonnian Sword">
+<img class="equip-img" src="blt_img_97.png" alt="Sparring Twohander">
 </td>
 <td>
 <p>ThrowingJavelins</p>
-<img class="equip-img" src="blt_img_98.png" alt="Hooked Javelin">
+<img class="equip-img" src="blt_img_98.png" alt="Sparring Javelin">
 </td>
 <td>
 <p>ThrowingJavelins</p>
-<img class="equip-img" src="blt_img_99.png" alt="Hooked Javelin">
+<img class="equip-img" src="blt_img_99.png" alt="Sparring Javelin">
 </td>
 </tr>
 </table>
@@ -1355,7 +1531,7 @@
 <td>Equipment</td>
 <td>
 <p>TwoHandedAxe</p>
-<img class="equip-img" src="blt_img_106.png" alt="White Lion Greataxe">
+<img class="equip-img" src="blt_img_106.png" alt="Execution Axe">
 </td>
 </tr>
 </table>
@@ -1546,7 +1722,7 @@
 <tr>
 <td>Allow Death</td>
 <td>
-<p>Disabled</p>
+<p>Enabled</p>
 </td>
 <td>Whether an adopted hero is allowed to die</td>
 </tr>
@@ -1631,7 +1807,7 @@
 <tr>
 <td>Retinue Heal Per Kill</td>
 <td>
-<p>20</p>
+<p>50</p>
 </td>
 <td>HP the hero's retinue gets for every kill</td>
 </tr>
@@ -1810,507 +1986,6 @@
 <p>50000⦷</p>
 <p>Item: Armor: 100% Tier 4: 33%, Tier 5: 33%, Tier 6: 33%</p>
 </td>
-</tr>
-</table>
-</div>
-<div class="tournament-config">
-<a name="25"></a>
-<h1>Tournament Config</h1>
-<a name="26"></a>
-<h2>General</h2>
-<table>
-<tr>
-<td>Start Health Multiplier</td>
-<td>
-<p>2</p>
-</td>
-<td>Amount to multiply normal starting health by</td>
-</tr>
-<tr>
-<td>Disable Kill Rewards In Tournament</td>
-<td>
-<p>Enabled</p>
-</td>
-<td>Heroes won't get any kill rewards in tournaments</td>
-</tr>
-<tr>
-<td>Disable Tracking Kills Tournament</td>
-<td>
-<p>Enabled</p>
-</td>
-<td>Tournament kills / deaths won't be counted towards achievements or kill streaks</td>
-</tr>
-</table>
-<a name="27"></a>
-<h2>Equipment</h2>
-<table>
-<tr>
-<td>No Horses</td>
-<td>
-<p>Enabled</p>
-</td>
-<td>Remove horses completely from the BLT tournaments (the horse AI is terrible)</td>
-</tr>
-<tr>
-<td>No Spears</td>
-<td>
-<p>Enabled</p>
-</td>
-<td>Replaces all lances and spears with swords, because lance and spear combat is terrible</td>
-</tr>
-<tr>
-<td>Normalize Armor</td>
-<td>
-<p>Enabled</p>
-</td>
-<td>Replaces all armor with fixed tier armor, based on Culture if possible (tier specified by Normalized Armor Tier below)</td>
-</tr>
-<tr>
-<td>Normalize Armor Tier</td>
-<td>
-<p>4</p>
-</td>
-<td>Armor tier to set all contenstants to (1 to 6), if Normalize Armor is enabled</td>
-</tr>
-<tr>
-<td>Randomize Weapon Types</td>
-<td>
-<p>Enabled</p>
-</td>
-<td>Randomizes the weapons used in each round, weighted based on the classes of the participants</td>
-</tr>
-</table>
-<a name="28"></a>
-<h2>Balancing</h2>
-<table>
-<tr>
-<td>Previous Winner Debuffs</td>
-<td>
-<table>
-<tr>
-<td>
-<table>
-<tr>
-<td>Skill</td>
-<td>
-<p>All</p>
-</td>
-<td>Skill or skill group to modifer (all skills in a group will be modified)</td>
-</tr>
-<tr>
-<td>Skill Reduction Percent Per Win</td>
-<td>
-<p>10</p>
-</td>
-<td>Reduction to the skill per win (in %). See https://www.desmos.com/calculator/ajydvitcer for visualization of how skill will be modified.</td>
-</tr>
-<tr>
-<td>Floor Percent</td>
-<td>
-<p>65</p>
-</td>
-<td>The lower limit (in %) that the skill(s) can be reduced to.</td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-<td>Applies skill debuffers to previous tournament winners</td>
-</tr>
-</table>
-<a name="29"></a>
-<h2>Round Type</h2>
-<table>
-<tr>
-<td>Round 1 Type</td>
-<td>
-<table>
-<tr>
-<td>Vanilla</td>
-<td>
-<p>Enabled</p>
-</td>
-<td>Allow the vanilla round setup</td>
-</tr>
-<tr>
-<td>1 Match 4 Teams</td>
-<td>
-<p>Disabled</p>
-</td>
-<td>Allow 1 match with 4 teams of 4</td>
-</tr>
-<tr>
-<td>2 Matches 2 Teams</td>
-<td>
-<p>Disabled</p>
-</td>
-<td>Allow 2 matches with 2 teams of 4</td>
-</tr>
-<tr>
-<td>2 Matches 4 Teams</td>
-<td>
-<p>Disabled</p>
-</td>
-<td>Allow 2 matches with 4 teams of 2</td>
-</tr>
-<tr>
-<td>4 Matches 2 Teams</td>
-<td>
-<p>Disabled</p>
-</td>
-<td>Allow 4 matches with 2 teams of 2</td>
-</tr>
-<tr>
-<td>4 Matches 4 Teams</td>
-<td>
-<p>Disabled</p>
-</td>
-<td>Allow 4 matches with 4 teams of 1</td>
-</tr>
-<tr>
-<td>8 Matches 2 Teams</td>
-<td>
-<p>Disabled</p>
-</td>
-<td>Allow 8 matches with 2 teams of 1</td>
-</tr>
-</table>
-</td>
-<td>Round 1 Type</td>
-</tr>
-<tr>
-<td>Round 2 Type</td>
-<td>
-<table>
-<tr>
-<td>Vanilla</td>
-<td>
-<p>Enabled</p>
-</td>
-<td>Allow the vanilla round setup</td>
-</tr>
-<tr>
-<td>1 Match 2 Teams</td>
-<td>
-<p>Disabled</p>
-</td>
-<td>Allow 1 match with 2 teams of 4</td>
-</tr>
-<tr>
-<td>1 Match 4 Teams</td>
-<td>
-<p>Disabled</p>
-</td>
-<td>Allow 1 match with 4 teams of 2</td>
-</tr>
-<tr>
-<td>2 Matches 2 Teams</td>
-<td>
-<p>Disabled</p>
-</td>
-<td>Allow 2 matches with 2 teams of 2</td>
-</tr>
-<tr>
-<td>2 Matches 4 Teams</td>
-<td>
-<p>Disabled</p>
-</td>
-<td>Allow 2 matches with 4 teams of 1</td>
-</tr>
-<tr>
-<td>4 Matches 2 Teams</td>
-<td>
-<p>Disabled</p>
-</td>
-<td>Allow 4 matches with 2 teams of 1</td>
-</tr>
-</table>
-</td>
-<td>Round 2 Type</td>
-</tr>
-<tr>
-<td>Round 3 Type</td>
-<td>
-<table>
-<tr>
-<td>Vanilla</td>
-<td>
-<p>Enabled</p>
-</td>
-<td>Allow the vanilla round setup</td>
-</tr>
-<tr>
-<td>1 Match 2 Teams</td>
-<td>
-<p>Disabled</p>
-</td>
-<td>Allow 1 match with 2 teams of 2</td>
-</tr>
-<tr>
-<td>1 Match 4 Teams</td>
-<td>
-<p>Disabled</p>
-</td>
-<td>Allow 1 match with 4 teams of 1</td>
-</tr>
-<tr>
-<td>2 Matches 2 Teams</td>
-<td>
-<p>Disabled</p>
-</td>
-<td>Allow 2 matches with 2 teams of 1</td>
-</tr>
-</table>
-</td>
-<td>Round 3 Type</td>
-</tr>
-</table>
-<a name="30"></a>
-<h2>Round Rewards</h2>
-<table>
-<tr>
-<td>Round 1 Rewards</td>
-<td>
-<table>
-<tr>
-<td>Win Gold</td>
-<td>
-<p>5000</p>
-</td>
-<td>Gold won if the hero wins thier match in the round</td>
-</tr>
-<tr>
-<td>Win XP</td>
-<td>
-<p>5000</p>
-</td>
-<td>XP given if the hero wins thier match in the round</td>
-</tr>
-<tr>
-<td>Lose XP</td>
-<td>
-<p>20000</p>
-</td>
-<td>XP given if the hero loses thier match in a round</td>
-</tr>
-</table>
-</td>
-<td>Round 1 Rewards</td>
-</tr>
-<tr>
-<td>Round 2 Rewards</td>
-<td>
-<table>
-<tr>
-<td>Win Gold</td>
-<td>
-<p>7500</p>
-</td>
-<td>Gold won if the hero wins thier match in the round</td>
-</tr>
-<tr>
-<td>Win XP</td>
-<td>
-<p>7500</p>
-</td>
-<td>XP given if the hero wins thier match in the round</td>
-</tr>
-<tr>
-<td>Lose XP</td>
-<td>
-<p>10000</p>
-</td>
-<td>XP given if the hero loses thier match in a round</td>
-</tr>
-</table>
-</td>
-<td>Round 2 Rewards</td>
-</tr>
-<tr>
-<td>Round 3 Rewards</td>
-<td>
-<table>
-<tr>
-<td>Win Gold</td>
-<td>
-<p>10000</p>
-</td>
-<td>Gold won if the hero wins thier match in the round</td>
-</tr>
-<tr>
-<td>Win XP</td>
-<td>
-<p>10000</p>
-</td>
-<td>XP given if the hero wins thier match in the round</td>
-</tr>
-<tr>
-<td>Lose XP</td>
-<td>
-<p>5000</p>
-</td>
-<td>XP given if the hero loses thier match in a round</td>
-</tr>
-</table>
-</td>
-<td>Round 3 Rewards</td>
-</tr>
-<tr>
-<td>Round 4 Rewards</td>
-<td>
-<table>
-<tr>
-<td>Win Gold</td>
-<td>
-<p>0</p>
-</td>
-<td>Gold won if the hero wins thier match in the round</td>
-</tr>
-<tr>
-<td>Win XP</td>
-<td>
-<p>0</p>
-</td>
-<td>XP given if the hero wins thier match in the round</td>
-</tr>
-<tr>
-<td>Lose XP</td>
-<td>
-<p>0</p>
-</td>
-<td>XP given if the hero loses thier match in a round</td>
-</tr>
-</table>
-</td>
-<td>Round 4 Rewards</td>
-</tr>
-</table>
-<a name="31"></a>
-<h2>Rewards</h2>
-<table>
-<tr>
-<td>Win Gold</td>
-<td>
-<p>50000</p>
-</td>
-<td>Gold won if the hero wins the tournaments</td>
-</tr>
-<tr>
-<td>Win XP</td>
-<td>
-<p>50000</p>
-</td>
-<td>XP given if the hero wins the tournaments</td>
-</tr>
-<tr>
-<td>Participate XP</td>
-<td>
-<p>10000</p>
-</td>
-<td>XP given if the hero participates in a tournament but doesn't win</td>
-</tr>
-<tr>
-<td>Prize</td>
-<td>
-<a name="32"></a>
-<h2>Reward Type</h2>
-<table>
-<tr>
-<td>Weapon Weight</td>
-<td>
-<p>1</p>
-</td>
-<td>Relative proportion of rewards that will be weapons. This includes all one handed, two handed, ranged and ammo.</td>
-</tr>
-<tr>
-<td>Armor Weight</td>
-<td>
-<p>1</p>
-</td>
-<td>Relative proportion of rewards that will be armor</td>
-</tr>
-<tr>
-<td>Mount Weight</td>
-<td>
-<p>0.1</p>
-</td>
-<td>Relative proportion of rewards that will be mounts</td>
-</tr>
-</table>
-<a name="33"></a>
-<h2>Reward Tier</h2>
-<table>
-<tr>
-<td>Tier 1 Weight</td>
-<td>
-<p>0</p>
-</td>
-<td>Relative proportion of rewards that will be Tier 1</td>
-</tr>
-<tr>
-<td>Tier 2 Weight</td>
-<td>
-<p>0</p>
-</td>
-<td>Relative proportion of rewards that will be Tier 2</td>
-</tr>
-<tr>
-<td>Tier 3 Weight</td>
-<td>
-<p>0</p>
-</td>
-<td>Relative proportion of rewards that will be Tier 3</td>
-</tr>
-<tr>
-<td>Tier 4 Weight</td>
-<td>
-<p>0</p>
-</td>
-<td>Relative proportion of rewards that will be Tier 4</td>
-</tr>
-<tr>
-<td>Tier 5 Weight</td>
-<td>
-<p>2</p>
-</td>
-<td>Relative proportion of rewards that will be Tier 5</td>
-</tr>
-<tr>
-<td>Tier 6 Weight</td>
-<td>
-<p>1.5</p>
-</td>
-<td>Relative proportion of rewards that will be Tier 6</td>
-</tr>
-<tr>
-<td>Custom Weight</td>
-<td>
-<p>1</p>
-</td>
-<td>Relative proportion of rewards that will be Custom (Tier 6 with modifiers as per the Custom Reward settings below)</td>
-</tr>
-</table>
-</td>
-<td>Winners prize</td>
-</tr>
-</table>
-<a name="34"></a>
-<h2>Betting</h2>
-<table>
-<tr>
-<td>Enable Betting</td>
-<td>
-<p>Enabled</p>
-</td>
-<td>Enable betting</td>
-</tr>
-<tr>
-<td>Betting On Final Only</td>
-<td>
-<p>Enabled</p>
-</td>
-<td>Only allow betting on the final betting</td>
 </tr>
 </table>
 </div>
